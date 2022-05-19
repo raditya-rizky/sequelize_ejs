@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= data.product_name %></title>
+  </head>
+  <body>
+    <div>
+      <h1>Product Name: <%= data.product_name %></h1>
+      <h5>Category: <%= data.category %></h5>
+      <h5>Variant: <%= data.variant %></h5>
+      <p>Description: <%= data.description %></p>
+      <h4>Price: <%= data.price %></h4>
+      <h5>Stock: <%= data.stock %></h5>
+      <h4>Seller: <%= data.seller %></h4>
+    </div>
+    <div>
+      <!-- <a
+        href="/product/<%= data.id %>"
+        onclick="return confirm('Delete this product?')"
+        >Delete Product</a
+      > -->
+      <form action="/product?_method=DELETE" method="post">
+        <input type="hidden" name="id" value="<%= data.id %>" />
+        <button type="submit" onclick="return confirm('Delete this product?')">
+          Delete Product
+        </button>
+      </form>
+
+      <br />
+      <a href="/product/edit/<%= data.id %>">Edit Product</a>
+      <br />
+      <br />
+      <a href="/product">All Products</a>
+    </div>
+  </body>
+</html>

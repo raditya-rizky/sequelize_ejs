@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "123456",
+    "database": "sequelize_ejs_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "123456",
+    "database": "sequelize_ejs_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "123456",
+    "database": "sequelize_ejs_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

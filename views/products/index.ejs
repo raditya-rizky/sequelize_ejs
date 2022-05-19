@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | All</title>
+  </head>
+  <body>
+    <a href="/product/create">Add new product</a>
+    <br />
+    <br />
+
+    <% allProducts.forEach(element => { %>
+    <div style="border: 2px solid black">
+      <h1><%= element.product_name %></h1>
+      <p>Category: <%= element.category %></p>
+      <h4>Price: <%= element.price %></h4>
+      <a href="/product/<%= element.id %> ">Baca lebih lanjut</a>
+    </div>
+    <br />
+    <br />
+    <% }) %>
+  </body>
+</html>
